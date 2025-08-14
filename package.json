@@ -1,8 +1,8 @@
 {
-  "name": "himanshu-portfolio",
+  "name": "portfolio",
   "version": "1.0.0",
   "description": "A React-based portfolio website for Himanshu Saini - Software Engineer II (Backend)",
-  "homepage": "https://himanshu-saini.github.io/himanshu-portfolio",
+  "homepage": "https://himanshu-saini.github.io/portfolio",
   "main": "index.js",
   "scripts": {
     "start": "react-scripts start",

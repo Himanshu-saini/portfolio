@@ -42,8 +42,8 @@ A modern, responsive portfolio website showcasing the professional experience an
 
 1. Clone the repository
 ```bash
-git clone https://github.com/himanshu-saini/himanshu-portfolio.git
-cd himanshu-portfolio
+git clone https://github.com/himanshu-saini/portfolio.git
+cd portfolio
 ```
 
 2. Install dependencies
@@ -77,7 +77,7 @@ npm run deploy
 ## 📁 Project Structure
 
 ```
-himanshu-portfolio/
+portfolio/
 ├── public/
 │   ├── index.html
 │   ├── Himanshu_Resume_2025.pdf
