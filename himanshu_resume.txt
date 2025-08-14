@@ -1,0 +1,64 @@
+
+HIMANSHU SAINI
+Software Engineer II (Backend)
+Bengaluru, India  •  +91-9899880773  •  himanshusaini06@gmail.com  •  GitHub  •   Linkedin
+Professional Summary
+
+Results-driven backend software engineer with 4+ years of expertise in Java, Python, and Ruby, specialising in microservices, multitenant architectures, and event-driven architecture. Proficient in high-level design (HLD), low-level system design (LLD), and AWS cloud, with a strong track record of developing scalable systems.
+
+Professional Experience
+
+Software Engineer 2 | Nykaa (Bengaluru, India) | Beauty and Fashion E-Commerce Platform	Oct ’24 - Present
+Technologies Worked: Java, Spring Boot, Python, Redshift, AWS, Docker, ECS/EC2, DynamoDB, SQS, Konga
+	•	Key contributor to the NES team, owning the deployment of 40% Nykaa microservices in the UAE region.
+	•	Acquired an architectural understanding of all Nykaa's services for better designing multi-tenant changes.
+	•	Designed and documented LLD of features like config management, tenant onboarding, pipeline deployments and branching strategy needed for converting the current stack to Multi-tenant services.
+	•	Owned the Data Science side of work for NES team for quick feature deployment, gaining understanding of Redshift, Airflow, and Spark DAGs.
+	•	Acted as a communication bridge between our UAE partners and various platform teams, directing work and unblocking feature development.
+	•	Led efforts to remove resource-specific hard-coding, enabling multi-region deployments and multitenancy.
+	•	Collaborated with platform teams to resolve architecture bottlenecks, ensuring on-time deployment of services.
+	•	Presented scalable solutions in cross-team discussions, addressing challenges in multi-region infrastructure.
+
+Software Engineer - Backend | Amoga (Bengaluru, India) | Low-Code No-Code Enterprise Software 	Aug ’22 - Oct ‘24
+Technologies Worked: Java, Spring Boot, Python, Django, FastAPI, PostgreSQL, Redis, Socket IO, Docker
+	•	Own the Workflow Automation service, driving v2 development and deployment for seamless business workflows.
+	•	Built logic for app studio publish, accelerating application creation by 10x and boosting usability.
+	•	Designed and implemented an RBAC system for precise access control, enhancing user management capabilities.
+	•	Reduced code redundancy by 20% through module refactoring and reusable helper functions.
+	•	Optimised socket messaging with Redis, reducing redundancy by 50% in targeted communication.
+
+Software Engineer - Backend | TailNode (Gurgaon, India) | Software consultancy	Oct ‘21 - Aug ’22
+Technologies Worked: DRF, Python, Ruby-on-Rails, MySQL, AWS, Heroku
+	•	Delivered 3 end-to-end projects, overseeing development, deployment, and post-launch support.
+	•	Mentored 3 interns, streamlining onboarding and task allocation, achieving faster team ramp-up.
+	•	Started and owned project development in Python, which improved project capabilities and talent hiring
+
+Skills
+
+	•	Programming Languages: Java, Python, Ruby
+	•	Frameworks: Spring/Spring Boot, Django - REST, FastAPI, Ruby-on-Rails, Spark
+	•	Databases: MySQL, PostgreSQL, Cassandra, Redis, Redshift
+	•	DevOps: Git, Docker, Kafka, AWS (EC2/ECS, DynamoDB, IAM, Lambda)
+	•	Core Competencies: REST APIs, Microservices Architecture, AI Prompting, DSA, System Design
+
+Education
+
+Bachelor of Engineering, Computer Science Majors | 8.1 CGPA	May ‘17 - May ‘21
+Jaypee Institute Of Information Technology	Noida, India
+Higher Secondary (CBSE) | 81.8%	April ‘15 - Match ‘17
+Gyan Bharati School	Saket, Delhi
+
+Projects and Achievements
+
+Awarded as “The Bright Spark” at Nykaa
+Awarded by the Nykaa leadership in the company-wide tech townhall for my ownship and contribution to NES project within 10 months of joining the organisation.
+
+Multi-tenant storage platform for the healthcare industry
+Built a scalable, fault-tolerant storage solution using Cassandra and Redis, leveraging multi-tenancy to reduce infrastructure costs
+by 25%.
+
+
+Publication
+
+A Load Balancing-Based Cost-Effective Multi-Tenant Fault-Tolerant System
+Published in Lecture Notes in Networks and Systems, Springer, vol. 204 (2021). [https://doi.org/10.1007/978-981-16-1395-1_61]

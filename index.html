@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Himanshu Saini - Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .hero-avatar {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 4px solid rgba(102, 126, 234, 0.3);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        
+        .profile-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top;
+            border-radius: 50%;
+        }
+        
+        .hero-content {
+            display: flex;
+            align-items: center;
+            gap: 4rem;
+            max-width: 100%;
+        }
+        
+        .hero-avatar:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s ease;
+        }
+        
+        /* Mobile responsive styles */
+        @media (max-width: 768px) {
+            .hero-content {
+                flex-direction: column;
+                text-align: center;
+                gap: 2rem;
+                width: 100%;
+            }
+            
+            .hero-text {
+                order: 2;
+                max-width: 100%;
+                width: 100%;
+            }
+            
+            .hero-image {
+                order: 1;
+                margin-bottom: 1rem;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+            }
+            
+            .hero-avatar {
+                width: 250px;
+                height: 250px;
+                margin: 0 auto;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+                line-height: 1.2;
+            }
+            
+            .hero h2 {
+                font-size: 1.5rem;
+                margin-bottom: 1rem;
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
+                gap: 1rem;
+                align-items: center;
+            }
+            
+            .btn {
+                width: 100%;
+                max-width: 300px;
+            }
+            
+            .container {
+                padding: 0 1rem;
+                width: 100%;
+                max-width: 100%;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero h2 {
+                font-size: 1.3rem;
+            }
+            
+            .hero-avatar {
+                width: 200px;
+                height: 200px;
+            }
+            
+            .container {
+                padding: 0 0.5rem;
+            }
+        }
+        
+        /* Contact Section Styles */
+        .contact {
+            background: linear-gradient(135deg, #16213e 0%, #0a0a0a 100%);
+            padding: 6rem 0;
+        }
+        
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            margin-top: 3rem;
+        }
+        
+        .contact-info,
+        .social-links {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            padding: 2.5rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+        
+        .contact-info:hover,
+        .social-links:hover {
+            border-color: rgba(102, 126, 234, 0.3);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            transform: translateY(-5px);
+        }
+        
+        .info-header,
+        .social-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        .info-header h3,
+        .social-header h3 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: #ffffff;
+            margin-bottom: 0.5rem;
+        }
+        
+        .info-header p,
+        .social-header p {
+            color: #ccc;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+        
+        .info-items {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+        
+        .info-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1.5rem;
+            background: rgba(102, 126, 234, 0.1);
+            border-radius: 15px;
+            border: 1px solid rgba(102, 126, 234, 0.2);
+            transition: all 0.3s ease;
+        }
+        
+        .info-item:hover {
+            background: rgba(102, 126, 234, 0.15);
+            border-color: rgba(102, 126, 234, 0.4);
+        }
+        
+        .info-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            color: white;
+            flex-shrink: 0;
+        }
+        
+        .info-content h4 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #ffffff;
+            margin-bottom: 0.5rem;
+        }
+        
+        .info-content a,
+        .info-content span {
+            color: #667eea;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: color 0.3s ease;
+        }
+        
+        .info-content a:hover {
+            color: #8b9df0;
+        }
+        
+        .social-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .social-link {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+            padding: 2rem 1.5rem;
+            background: rgba(102, 126, 234, 0.1);
+            border-radius: 15px;
+            border: 1px solid rgba(102, 126, 234, 0.2);
+            text-decoration: none;
+            color: #ffffff;
+            transition: all 0.3s ease;
+        }
+        
+        .social-link:hover {
+            background: rgba(102, 126, 234, 0.15);
+            border-color: rgba(102, 126, 234, 0.4);
+            text-decoration: none;
+            color: #ffffff;
+        }
+        
+        .social-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: white;
+            transition: all 0.3s ease;
+        }
+        
+        .social-link:hover .social-icon {
+            transform: scale(1.1);
+        }
+        
+        .social-label {
+            font-size: 1rem;
+            font-weight: 500;
+            text-align: center;
+        }
+        
+        @media (max-width: 768px) {
+            .contact-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .contact-info,
+            .social-links {
+                padding: 2rem;
+            }
+            
+            .social-grid {
+                grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+                gap: 1rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .contact-info,
+            .social-links {
+                padding: 1.5rem;
+            }
+            
+            .info-item {
+                padding: 1rem;
+            }
+            
+            .info-icon {
+                width: 40px;
+                height: 40px;
+                font-size: 1rem;
+            }
+            
+            .social-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="nav-logo">
+                    <h2>Himanshu</h2>
+                </div>
+                <div class="nav-menu" id="nav-menu">
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#experience">Experience</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <div class="nav-toggle" id="nav-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background">
+            <div class="hero-particles"></div>
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Hi, I'm <span class="highlight">Himanshu</span></h1>
+                    <h2>Software Engineer II (Backend)</h2>
+                    <p>Results-driven backend software engineer with 4+ years of expertise in Java, Python, and Ruby, specializing in microservices, multitenant architectures, and event-driven architecture.</p>
+                    <div class="hero-buttons">
+                        <button class="btn btn-primary" onclick="scrollToProjects()">View My Work</button>
+                        <button class="btn btn-secondary" onclick="downloadResume()">Download CV</button>
+                    </div>
+                </div>
+                <div class="hero-image">
+                                    <div class="hero-avatar">
+                    <img src="/himanshu_profilepic.jpeg" alt="Himanshu Saini" class="profile-image">
+                </div>
+                </div>
+            </div>
+            <div class="hero-social">
+                <a href="https://github.com/Himanshu-saini" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/himanshusaini17/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            </div>
+            <div class="scroll-indicator" onclick="scrollToSection('about')">
+                <div class="scroll-arrow">
+                    <i class="fas fa-arrow-down"></i>
+                </div>
+                <span>Scroll Down</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">About Me</h2>
+                <p class="section-subtitle">Get to know me better</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Who I Am</h3>
+                    <p>I'm a results-driven backend software engineer with 4+ years of expertise in Java, Python, and Ruby, specializing in microservices, multitenant architectures, and event-driven architecture.</p>
+                    <p>Currently working as Software Engineer II at Nykaa, I'm a key contributor to the NES team, owning the deployment of 40% of Nykaa microservices in the UAE region. I've designed and documented LLD for features like config management, tenant onboarding, and pipeline deployments.</p>
+                    <p>I'm passionate about building scalable systems and have experience with AWS cloud services, high-level design (HLD), and low-level system design (LLD). I've also published research on multi-tenant fault-tolerant systems in Springer's Lecture Notes in Networks and Systems.</p>
+                    <div class="about-stats">
+                        <div class="stat">
+                            <span class="stat-number">4+</span>
+                            <span class="stat-label">Years Experience</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">10+</span>
+                            <span class="stat-label">Projects Completed</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">3</span>
+                            <span class="stat-label">Companies Worked</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-cards">
+                    <div class="about-card">
+                        <div class="card-icon">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <h4>Professional</h4>
+                        <p>Results-driven backend software engineer with 4+ years of expertise in Java, Python, and Ruby.</p>
+                    </div>
+                    <div class="about-card">
+                        <div class="card-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h4>Architecture</h4>
+                        <p>Specializing in microservices, multitenant architectures, and event-driven architecture.</p>
+                    </div>
+                    <div class="about-card">
+                        <div class="card-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h4>Education</h4>
+                        <p>Bachelor of Engineering in Computer Science from Jaypee Institute of Information Technology with 8.1 CGPA.</p>
+                    </div>
+                    <div class="about-card">
+                        <div class="card-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <h4>Expertise</h4>
+                        <p>Proficient in high-level design (HLD), low-level system design (LLD), and AWS cloud.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Skills & Expertise</h2>
+                <p class="section-subtitle">Technologies I work with</p>
+            </div>
+            <div class="skills-content">
+                <div class="skill-category">
+                    <h3 class="category-title">Programming Languages</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <div class="skill-icon" style="color: #ED8B00;">
+                                <i class="fab fa-java"></i>
+                            </div>
+                            <div class="skill-info">
+                                <h4>Java</h4>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 95%; background-color: #ED8B00;"></div>
+                                </div>
+                                <span class="skill-level">95%</span>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon" style="color: #3776AB;">
+                                <i class="fab fa-python"></i>
+                            </div>
+                            <div class="skill-info">
+                                <h4>Python</h4>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 90%; background-color: #3776AB;"></div>
+                                </div>
+                                <span class="skill-level">90%</span>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon" style="color: #CC342D;">
+                                <i class="fas fa-gem"></i>
+                            </div>
+                            <div class="skill-info">
+                                <h4>Ruby</h4>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 85%; background-color: #CC342D;"></div>
+                                </div>
+                                <span class="skill-level">85%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3 class="category-title">Frameworks & Libraries</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <div class="skill-icon" style="color: #6DB33F;">
+                                <i class="fab fa-java"></i>
+                            </div>
+                            <div class="skill-info">
+                                <h4>Spring Boot</h4>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 92%; background-color: #6DB33F;"></div>
+                                </div>
+                                <span class="skill-level">92%</span>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon" style="color: #092E20;">
+                                <i class="fab fa-python"></i>
+                            </div>
+                            <div class="skill-info">
+                                <h4>Django/FastAPI</h4>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 88%; background-color: #092E20;"></div>
+                                </div>
+                                <span class="skill-level">88%</span>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon" style="color: #CC0000;">
+                                <i class="fas fa-gem"></i>
+                            </div>
+                            <div class="skill-info">
+                                <h4>Ruby on Rails</h4>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 85%; background-color: #CC0000;"></div>
+                                </div>
+                                <span class="skill-level">85%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3 class="category-title">Databases & Storage</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <div class="skill-icon" style="color: #336791;">
+                                <i class="fas fa-database"></i>
+                            </div>
+                            <div class="skill-info">
+                                <h4>PostgreSQL/MySQL</h4>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 90%; background-color: #336791;"></div>
+                                </div>
+                                <span class="skill-level">90%</span>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon" style="color: #DC382D;">
+                                <i class="fas fa-database"></i>
+                            </div>
+                            <div class="skill-info">
+                                <h4>Redis/Cassandra</h4>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 85%; background-color: #DC382D;"></div>
+                                </div>
+                                <span class="skill-level">85%</span>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon" style="color: #FF6B35;">
+                                <i class="fas fa-database"></i>
+                            </div>
+                            <div class="skill-info">
+                                <h4>Redshift</h4>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 80%; background-color: #FF6B35;"></div>
+                                </div>
+                                <span class="skill-level">80%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3 class="category-title">Cloud Tools & Services</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <div class="skill-icon" style="color: #FF9900;">
+                                <i class="fab fa-aws"></i>
+                            </div>
+                            <div class="skill-info">
+                                <h4>AWS ECS/EC2</h4>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 88%; background-color: #FF9900;"></div>
+                                </div>
+                                <span class="skill-level">88%</span>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon" style="color: #FF9900;">
+                                <i class="fab fa-aws"></i>
+                            </div>
+                            <div class="skill-info">
+                                <h4>DynamoDB</h4>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 85%; background-color: #FF9900;"></div>
+                                </div>
+                                <span class="skill-level">85%</span>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon" style="color: #FF9900;">
+                                <i class="fab fa-aws"></i>
+                            </div>
+                            <div class="skill-info">
+                                <h4>SQS/SNS</h4>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 82%; background-color: #FF9900;"></div>
+                                </div>
+                                <span class="skill-level">82%</span>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon" style="color: #FF9900;">
+                                <i class="fab fa-aws"></i>
+                            </div>
+                            <div class="skill-info">
+                                <h4>Lambda</h4>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 80%; background-color: #FF9900;"></div>
+                                </div>
+                                <span class="skill-level">80%</span>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon" style="color: #FF9900;">
+                                <i class="fab fa-aws"></i>
+                            </div>
+                            <div class="skill-info">
+                                <h4>IAM & Security</h4>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 85%; background-color: #FF9900;"></div>
+                                </div>
+                                <span class="skill-level">85%</span>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon" style="color: #FF9900;">
+                                <i class="fab fa-aws"></i>
+                            </div>
+                            <div class="skill-info">
+                                <h4>CloudFormation</h4>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 78%; background-color: #FF9900;"></div>
+                                </div>
+                                <span class="skill-level">78%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3 class="category-title">DevOps & Tools</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <div class="skill-icon" style="color: #2496ED;">
+                                <i class="fab fa-docker"></i>
+                            </div>
+                            <div class="skill-info">
+                                <h4>Docker</h4>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 90%; background-color: #2496ED;"></div>
+                                </div>
+                                <span class="skill-level">90%</span>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon" style="color: #F05032;">
+                                <i class="fab fa-git-alt"></i>
+                            </div>
+                            <div class="skill-info">
+                                <h4>Git</h4>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 95%; background-color: #F05032;"></div>
+                                </div>
+                                <span class="skill-level">95%</span>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon" style="color: #231F20;">
+                                <i class="fas fa-cloud"></i>
+                            </div>
+                            <div class="skill-info">
+                                <h4>Kafka</h4>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 80%; background-color: #231F20;"></div>
+                                </div>
+                                <span class="skill-level">80%</span>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon" style="color: #17C1E8;">
+                                <i class="fas fa-cloud"></i>
+                            </div>
+                            <div class="skill-info">
+                                <h4>Airflow</h4>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 75%; background-color: #17C1E8;"></div>
+                                </div>
+                                <span class="skill-level">75%</span>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon" style="color: #E25A1C;">
+                                <i class="fas fa-cloud"></i>
+                            </div>
+                            <div class="skill-info">
+                                <h4>Spark</h4>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 78%; background-color: #E25A1C;"></div>
+                                </div>
+                                <span class="skill-level">78%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="additional-skills">
+                <h3>Core Competencies</h3>
+                <div class="skills-tags">
+                    <span class="skill-tag">REST APIs</span>
+                    <span class="skill-tag">Microservices Architecture</span>
+                    <span class="skill-tag">Multi-tenant Systems</span>
+                    <span class="skill-tag">Event-driven Architecture</span>
+                    <span class="skill-tag">System Design (HLD/LLD)</span>
+                    <span class="skill-tag">AI Prompting</span>
+                    <span class="skill-tag">Data Structures & Algorithms</span>
+                    <span class="skill-tag">RBAC Systems</span>
+                    <span class="skill-tag">Socket.IO</span>
+                    <span class="skill-tag">Kong Gateway</span>
+                    <span class="skill-tag">Multi-region Deployments</span>
+                    <span class="skill-tag">Pipeline Deployments</span>
+                    <span class="skill-tag">Branching Strategy</span>
+                    <span class="skill-tag">Config Management</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Featured Projects</h2>
+                <p class="section-subtitle">Some of my recent work</p>
+            </div>
+            
+            <div class="projects-grid" id="projects-grid">
+                <!-- Project cards will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Experience & Education</h2>
+                <p class="section-subtitle">My professional journey</p>
+            </div>
+            <div class="timeline" id="timeline">
+                <!-- Timeline items will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Get In Touch</h2>
+                <p class="section-subtitle">Let's connect and discuss opportunities</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="info-header">
+                        <h3>Contact Information</h3>
+                        <p>Feel free to reach out through any of these channels</p>
+                    </div>
+                    <div class="info-items">
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="info-content">
+                                <h4>Email</h4>
+                                <a href="mailto:himanshu.saini@example.com">himanshu.saini@example.com</a>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="info-content">
+                                <h4>Phone</h4>
+                                <a href="tel:+919876543210">+91 98765 43210</a>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="info-content">
+                                <h4>Current Location</h4>
+                                <span>Bengaluru, India</span>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="info-content">
+                                <h4>Hometown</h4>
+                                <span>Gurgaon, India</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="social-links">
+                    <div class="social-header">
+                        <h3>Connect With Me</h3>
+                        <p>Follow me on social platforms for updates</p>
+                    </div>
+                    <div class="social-grid">
+                        <a href="https://www.linkedin.com/in/himanshusaini17/" target="_blank" rel="noopener noreferrer" class="social-link">
+                            <div class="social-icon">
+                                <i class="fab fa-linkedin"></i>
+                            </div>
+                            <span class="social-label">LinkedIn</span>
+                        </a>
+                        <a href="https://github.com/Himanshu-saini" target="_blank" rel="noopener noreferrer" class="social-link">
+                            <div class="social-icon">
+                                <i class="fab fa-github"></i>
+                            </div>
+                            <span class="social-label">GitHub</span>
+                        </a>
+                        <a href="https://leetcode.com/u/ShadowSword/" target="_blank" rel="noopener noreferrer" class="social-link">
+                            <div class="social-icon">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <span class="social-label">LeetCode</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Himanshu Saini</h3>
+                    <p>A results-driven backend software engineer dedicated to building scalable systems, specializing in microservices, multitenant architectures, and event-driven architecture.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#experience">Experience</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <div class="footer-social">
+                        <a href="https://github.com/Himanshu-saini" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/himanshusaini17/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://leetcode.com/u/ShadowSword/" target="_blank"><i class="fas fa-code"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-copyright">
+                    <p>© 2025 Himanshu Saini.<br></br> Made with <i class="fas fa-heart heart-icon"></i> and lots of vide coding.</p>
+                </div>
+            </div>
+        </div>
+        <button class="scroll-to-top" onclick="scrollToTop()">
+            <i class="fas fa-arrow-up"></i>
+        </button>
+    </footer>
+
+    <script>
+        // Resume download function
+        function downloadResume() {
+            const link = document.createElement('a');
+            link.href = '/Himanshu Resume 2025.pdf';
+            link.download = 'Himanshu_Saini_Resume_2025.pdf';
+            link.click();
+        }
+
+        // Scroll to section function
+        function scrollToSection(sectionId) {
+            const element = document.getElementById(sectionId);
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        // Scroll to projects function
+        function scrollToProjects() {
+            const projectsSection = document.getElementById('projects');
+            if (projectsSection) {
+                projectsSection.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        // Scroll to top function
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+    </script>
+</body>
+</html>
