@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/himanshu-portfolio/static/css/main.ed90c958.css",
+    "main.js": "/himanshu-portfolio/static/js/main.34f6099c.js",
+    "index.html": "/himanshu-portfolio/index.html",
+    "main.ed90c958.css.map": "/himanshu-portfolio/static/css/main.ed90c958.css.map",
+    "main.34f6099c.js.map": "/himanshu-portfolio/static/js/main.34f6099c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ed90c958.css",
+    "static/js/main.34f6099c.js"
+  ]
+}
